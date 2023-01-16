@@ -22,6 +22,8 @@ header = next(reader)
 header_list = ["Year","Month","Day","Time","TempF"]
 writer.writerow(header_list)
 
+#This code takes the Kelvin Temperature and converts it to Farenheit
+#The next lines writes the code to the new file with TempF included
 for row in reader:
     Year, Month, Day, Time, TempK = row
     TempF = round((float(TempK) - 273.15) * 1.8 + 32.0,2)
